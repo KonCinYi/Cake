@@ -4,49 +4,117 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-body {
-    margin: 0;
-    background-color: rgb(113, 52, 52);
-    background: #081130;
 
-    background-image: url(../img/bg.png);
-    background-repeat: no-repeat;
-    /*background-position: center center;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+body {
+    font-family: 'Montserat', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    min-height: 100vh;
+
+    margin: 0;
+    
+    background: #081130;
+    
+
+    
+
+
+    
+
 }
 .container_header{
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 156px; 
+
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding-top: 37px;
+    padding-bottom: 31px;   
 }
 .header{
-    border: 1px solid rgba(126, 134, 142, 1);
-    min-height: 500px;
-    font-family: 'Montserat';
-    color: #fff;
-    
-    width: 1920px;
-    height: 82px;
-    top: 37px;
-    gap: 36px;
-    border: 1px 0px 0px 0px;
+    border-bottom: 1px solid rgba(127, 135, 144, 0.1);
+    position: absolute;
+    z-index: 1;
+    width: 100%; 
+}
+a {
+    text-decoration: none;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
 }
 .header_logo {
-    font-size: 21px;
+    font-size: 1.1325rem;
+    line-height: 1.43;
     font-weight: 500;
-    line-height: 30.03px;
-    text-align: left;
+    color: #fff;
+    transition-duration: 0.2s;
 }
-.header_text {
-    
+.header_info{
+    display:flex;
+    align-items: center;
+    gap: 70px;
+    transition: all 0.2s;
 }
-.header_button {
+.header_adress{
+    font-size: 0.75rem;
+    font-style: normal;
+    display: flex;
+    column-gap: 12px;
+    max-width: 151px;
+}
+.header_adress::before{
+    content: "";
+    background: url(../img/Facebook\ Places.svg) center / contain no-repeat;
+    width: 17px;
+    height: 23px;
+    flex-shrink: 0;
+}
+.header_phone{
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   font-size: clamp(14px, 1.6vw, 20px); 
+}
+.header_phone_number {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition-duration: 0.2s;
+}
+.header_phone_number::before{
+    content: "";
+    background: url(../img/Vector.svg);
+    width: 19px;
+    aspect-ratio: 1;
+}
+.header_phone_text {
+    font-size: 0.65em;
+}
+.main{
+}
+.head{
+    background: url(../img/bg.png) center / cover no-repeat;
+    padding-top: clamp(50px, 6.1vw, 118px);
+    padding-bottom: min(24.1vw, 465px);
+    overflow: hidden;
+    position: relative;
+}
 
-}
+
+
+
+
+
+
 
 @media screen and (max-width: 1700px){
     .container_header{
