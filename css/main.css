@@ -16,14 +16,7 @@ body {
 
     margin: 0;
     
-    background: #081130;
-    
-
-    
-
-
-    
-
+    /*background: #081130;8*/
 }
 .container_header{
     max-width: 1440px;
@@ -71,7 +64,7 @@ div {
 }
 .header_adress::before{
     content: "";
-    background: url(../img/Facebook\ Places.svg) center / contain no-repeat;
+    background: url(../img/Head/Facebook\ Places.svg) center / contain no-repeat;
     width: 17px;
     height: 23px;
     flex-shrink: 0;
@@ -93,7 +86,7 @@ div {
 }
 .header_phone_number::before{
     content: "";
-    background: url(../img/Vector.svg);
+    background: url(../img/Head/Vector.svg);
     width: 19px;
     aspect-ratio: 1;
 }
@@ -104,7 +97,12 @@ div {
     display: block;
 }
 .head{
-    background: url(../img/berry.png) left -95px top 202px / 281px 281px no-repeat, url(../img/berry-1.png) right -90px top 109px / 233px 235px no-repeat, url(../img/leaf.png) left -95px bottom -50px / 393px 399px no-repeat, url(../img/berry-2.png) bottom 90px right 183px / 273px 275px no-repeat, url(../img/bg.png) center / cover no-repeat;
+    background: 
+        url(../img/Head/berry-1.png) left -95px top 202px / 281px 281px no-repeat, 
+        url(../img/Head/berry-1.png) right -90px top 109px / 233px 235px no-repeat, 
+        url(../img/Head/leaf.png) left -95px bottom -50px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom 90px right 183px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) center / cover no-repeat;
     padding-top: clamp(50px, 6.1vw, 118px);
     padding-bottom: min(24.1vw, 465px);
     overflow: hidden;
@@ -151,6 +149,7 @@ div {
     align-items: center;
     column-gap: 20px;
 }
+
 .head_action_button{
     max-width: 277px;
     display: block;
@@ -169,6 +168,93 @@ div {
     line-height: 1.6;
     max-width: 150px;
 }
+.product{
+    background: 
+        url(../img/Products/berry-3.png) left 214px top 228px / 256px 256px no-repeat, 
+        url(../img/Products/leaf-2.png) left 252px bottom 431px / 108px 112px no-repeat, 
+        url(../img/Products/leaf-1.png) right 262px bottom 734px / 161px 167px no-repeat;
+    margin-bottom: 20px;
+    }
+
+.products_titele{
+    margin: 0;
+    margin-bottom: 4.1vmax;
+    text-align: center;
+    color: #2e363e;
+    font-size: clamp(32px, 4.04vw, 48px);
+    line-height: 1.25;
+    font-weight: 500;
+}
+.list_reset{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}.products_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.04vmax;
+}
+.products_item{
+    color: #2e363e;
+    border: 1px solid #f2f6fa;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+    background-color: #fff;
+    position: relative;
+}
+.products_card_img{
+    vertical-align: middle;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+.products_card_content{
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10px;
+}
+.products_card_title{
+    font-size: clamp(22px, 2vw, 24px);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 12px;
+    line-height: 1.43;
+}
+.product_card_describe{
+    max-width: 240px;
+    font-size: clamp(12px, 2vw, 14px);
+    margin: 0;
+    margin-bottom: 24px;
+}
+.products_card_price{
+    font-size: clamp(14px, 2vw, 24px);
+    color: #434b53;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+.button_reset{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+.products_card_button{
+    max-width: 163px;
+    padding-block: 20px;
+    border: none;
+    display: block;
+    background-color: #fed84c;
+    text-align: center;
+    transition-duration: 0.2s;
+    border-radius: 8px;
+    color: #2e363e;
+    font-size: 1.125rem;
+    line-height: 1.52;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+}
 
 
 
@@ -180,12 +266,21 @@ div {
         padding: 20px 20px;      
     }
     .head{
-        background: url(../img/berry.png) left -95px top 202px / 281px 281px no-repeat, url(../img/berry-1.png) right -90px top 200px / 233px 235px no-repeat, url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) center / cover no-repeat;
+        background: 
+        url(../img/Head/berry.png) left -95px top 202px / 281px 281px no-repeat, 
+        url(../img/Head/berry-1.png) right -90px top 200px / 233px 235px no-repeat, 
+        url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) center / cover no-repeat;
     }
 }
 @media screen and (max-width: 1100px){
     .head{
-        background: url(../img/berry.png) left -95px top 202px / 281px 281px no-repeat, url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) center / cover no-repeat;
+        background: 
+        url(../img/Head/berry.png) left -95px top 202px / 281px 281px no-repeat, 
+        url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) center / cover no-repeat;
     }
 }
 @media screen and (max-width: 950px){
@@ -233,6 +328,23 @@ div {
     .head_action_button{
         max-width: 100%;
     }
+    .products_card_button{
+        max-width: 100%;
+    }
+    .products_card_content{
+        padding-inline: 10px;
+        text-align: center; 
+        padding-block: 15px;
+    }
+    .products_card_price{
+        max-width: 100%;
+        font-size: 30px;
+    }
+    .product_card_describe{
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
 }
 @media screen and (max-width: 615px){
     .header_info{
@@ -253,7 +365,11 @@ div {
         gap: 5px;
     }
     .head{
-        background: url(../img/berry.png) left -105px top 5px / 281px 281px no-repeat, url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -100px / cover no-repeat;
+        background: 
+        url(../img/Head/berry.png) left -105px top 5px / 281px 281px no-repeat, 
+        url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) bottom right -100px / cover no-repeat;
     }
 }
 @media screen and (max-width: 440px){
@@ -279,7 +395,10 @@ div {
 }
 @media screen and (max-width: 405px){
     .head{
-        background: url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -100px / cover no-repeat;
+        background: 
+        url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) bottom right -100px / cover no-repeat;
     }
 }
 @media screen and (max-width: 345px){
@@ -308,7 +427,10 @@ div {
         gap: 15px;
     }
     .head{
-        background: url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -140px / cover no-repeat;
+        background: 
+        url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) bottom right -140px / cover no-repeat;
     }
 }
 @media screen and (max-width: 280px){
@@ -328,6 +450,9 @@ div {
         gap: 15px;
     }
     .head{
-        background: url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -130px / cover no-repeat;
+        background: 
+        url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
+        url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
+        url(../img/Head/bg.png) bottom right -130px / cover no-repeat;
     }
 }
