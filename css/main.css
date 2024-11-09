@@ -170,7 +170,7 @@ div {
 }
 .product{
     background: 
-        url(../img/Products/berry-3.png) left 214px top 228px / 256px 256px no-repeat, 
+        url(../img/Products/berry-3.png) left 11vmax top 228px / 256px 256px no-repeat, 
         url(../img/Products/leaf-2.png) left 252px bottom 431px / 108px 112px no-repeat, 
         url(../img/Products/leaf-1.png) right 262px bottom 734px / 161px 167px no-repeat;
     margin-bottom: 20px;
@@ -212,7 +212,7 @@ div {
     padding-block: 50px;
     display: flex;
     flex-direction: column;
-    padding-inline: 10px;
+    padding-inline: 34px;
 }
 .products_card_title{
     font-size: clamp(22px, 2vw, 24px);
@@ -257,8 +257,8 @@ div {
 }
 .photo{
     background: 
-        url(../img/photo/phone1.png) left bottom / 886px 1022px no-repeat,
-        #2e363e;
+        url(../img/photo/phone1.svg) left bottom / 986px 1022px no-repeat,
+        #081130;    
         padding-block: clamp(300px, 23vw, 310px);
         padding-right: 15px;
         position: relative;
@@ -281,10 +281,10 @@ div {
     width: 100%;
     height: 489px;
 }
-.photo__wrapper {
+.photo_wrapper{
     position: relative;
 }
-.photo__wrapper::before {
+.photo_wrapper::before{
     content: "";
     position: absolute;
     top: 0;
@@ -294,7 +294,7 @@ div {
     height: 164px;
     left: 18%;
 }
-.photo__wrapper::after {
+.photo_wrapper::after{
     content: "";
     position: absolute;
     top: 0;
@@ -308,11 +308,69 @@ div {
     padding-inline: 0.9375em;
     margin-inline: auto;
 }
-.photo__inner {
+.photo_inner {
     display: flex;
     justify-content: end;
     position: relative;
     padding-block: 109px;
+}
+.photo_content{
+    position: relative;
+    z-index: 1;
+}
+.photo_top_title {
+    background-color: #f2f6fa;
+    max-width: 246px;
+    color: #2e363e;
+    text-align: center;
+    padding-block: 10px;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.25vw;
+}
+.photo_title {
+    max-width: 10.42em;
+    margin: 0;
+    font-size: clamp(32px, 4.04vw, 48px);
+    line-height: 1.25;
+    font-weight: 500;
+    margin-bottom: 1.25vw;
+}
+.photo_text {
+    font-size: clamp(14px, 1.75vw, 21px);
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 2.1vw;
+}
+.button {
+    display: block;
+    background-color: #fed84c;
+    padding-block: 30px;
+    text-align: center;
+    transition-duration: 0.2s;
+    border-radius: 8px;
+    color: #2e363e;
+    font-size: 1.125rem;
+    line-height: 1.52;
+    width: 100%;
+}
+.photo_input-castom {
+    cursor: pointer;
+    max-width: 320px;
+}
+.photo_input {
+    display: none;
+}
+.input_reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
 }
 
 
@@ -320,6 +378,20 @@ div {
 
 
 
+@media screen and (max-width: 1700px){
+    .photo_content{
+        padding: 40px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .photo_inner{
+        justify-content: flex-start;
+    }
+    .photo{
+        background: url(../img/photo/phone1.svg) right 9vw bottom / 986px 1022px no-repeat, #081130;
+    }
+
+}
 @media screen and (max-width: 1472px){
     .container_header{
         padding: 20px 20px;      
@@ -341,6 +413,15 @@ div {
         url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
         url(../img/Head/bg.png) center / cover no-repeat;
     }
+    .photo_content{
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        padding: 20px;
+        top: 90px;
+    }
+    .photo_text{
+        max-width: 400px;
+    }
 }
 @media screen and (max-width: 950px){
     .head_action{
@@ -357,11 +438,19 @@ div {
     .head_inner{
         padding-top: 132px;
     }
-    
+    .photo{
+        background: url(../img/photo/phone1.svg) right 3vw bottom / 986px 1022px no-repeat, #081130;
+    }
 }
 @media screen and (max-width: 850px){
     .container_header{
         padding: 20px 15px;       
+    }
+    .photo_wrapper::after {
+        background: none;
+    }
+    .photo_wrapper::before {
+        background: none;
     }
 }
 @media screen and (max-width: 790px){
@@ -404,6 +493,22 @@ div {
         font-size: 18px;
         margin-bottom: 12px;
     }
+    .photo_inner{
+        text-align: center;
+        justify-content:center;
+        top: 150px;
+    }
+    .photo_content{
+        top: -90px;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .photo_top_title{
+        width: 100%;
+    }
+    
 }
 @media screen and (max-width: 615px){
     .header_info{
@@ -430,6 +535,9 @@ div {
         url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
         url(../img/Head/bg.png) bottom right -100px / cover no-repeat;
     }
+    .photo{
+        background: url(../img/photo/phone1.svg) right -5vw bottom / 986px 1022px no-repeat, #081130;
+    }
 }
 @media screen and (max-width: 440px){
     .container_header{
@@ -451,6 +559,9 @@ div {
     .header_adress{
         gap: 5px;
     }
+    .photo{
+        background: url(../img/photo/phone1.svg) right -10vw bottom / 986px 1022px no-repeat, #081130;
+    }
 }
 @media screen and (max-width: 405px){
     .head{
@@ -458,6 +569,20 @@ div {
         url(../img/Head/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, 
         url(../img/Head/berry-2.png) bottom right -100px / 273px 275px no-repeat, 
         url(../img/Head/bg.png) bottom right -100px / cover no-repeat;
+    }
+    .photo{
+        background: url(../img/photo/phone1.svg) right -15vw bottom / 986px 1022px no-repeat, #081130;
+    }
+    .photo_wrapper{
+
+    }
+}
+@media screen and (max-width: 370px){
+    .photo{
+        background: url(../img/photo/phone1.svg) right -20vw bottom / 986px 1022px no-repeat, #081130;
+    }
+    .photo_title{
+        font-size: 28px
     }
 }
 @media screen and (max-width: 345px){
@@ -468,6 +593,12 @@ div {
 @media screen and (max-width: 335px){
     .header_info{
         gap: 10px;
+    }
+    .photo_inner {
+        padding-block: 0px;
+    }
+    .photo{
+        background: url(../img/photo/phone1.svg) right -35vw bottom -25vw / 986px 1022px no-repeat, #081130;
     }
 }
 @media screen and (max-width: 328px){
