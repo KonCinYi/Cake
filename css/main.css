@@ -81,6 +81,7 @@ div {
    flex-direction: column;
    align-items: end;
    font-size: clamp(14px, 1.6vw, 20px); 
+
 }
 .header_phone_number {
     display: flex;
@@ -100,25 +101,233 @@ div {
     font-size: 0.65em;
 }
 .main{
+    display: block;
 }
 .head{
-    background: url(../img/bg.png) center / cover no-repeat;
+    background: url(../img/berry.png) left -95px top 202px / 281px 281px no-repeat, url(../img/berry-1.png) right -90px top 109px / 233px 235px no-repeat, url(../img/leaf.png) left -95px bottom -50px / 393px 399px no-repeat, url(../img/berry-2.png) bottom 90px right 183px / 273px 275px no-repeat, url(../img/bg.png) center / cover no-repeat;
     padding-top: clamp(50px, 6.1vw, 118px);
     padding-bottom: min(24.1vw, 465px);
     overflow: hidden;
     position: relative;
 }
+.container_head{
+    max-width: calc(74.375rem + 0.9375em* 2);
+    padding-inline: 0.9375em;
+    margin-inline: auto;
+}
+.head_inner{
+    padding-top: 188px;
+}
+.tasty{
+    background-color: #f2f6fa;
+    color:#2e363e;
+    max-width: 132px;
+    text-align: center;
+    padding-block: 10px;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    margin-bottom: 2vw;
+}
+.head_title_h1{
+    margin-bottom: 2vw;
+    max-width: 13.47em;
+    font-weight: 700;
+    font-size: clamp(32px, 4.04vw, 48px);
+    line-height: 1.25;
+    margin: 0;
+}
+.head_desc{
+    font-size: clamp(15px, 2.01vw, 24px);
+    line-height: 1.43;
+    max-width: 22.6em;
+    /*margin: 0;*/
+    margin-bottom: 3.35vw;
+}
+.head_action{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.head_action_button{
+    max-width: 277px;
+    display: block;
+    background-color: #fed84c;
+    padding-block: 30px;
+    text-align: center;
+    transition-duration: 0.2s;
+    border-radius: 8px;
+    color: #2e363e;
+    font-size: 1.125rem;
+    line-height: 1.52;
+    width: 100%;
+}
+.head_action_text{
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 150px;
+}
 
 
 
 
 
 
-
-
-@media screen and (max-width: 1700px){
+@media screen and (max-width: 1472px){
     .container_header{
-        padding: 0 100px;      
+        padding: 20px 20px;      
+    }
+    .head{
+        background: url(../img/berry.png) left -95px top 202px / 281px 281px no-repeat, url(../img/berry-1.png) right -90px top 200px / 233px 235px no-repeat, url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) center / cover no-repeat;
+    }
+}
+@media screen and (max-width: 1100px){
+    .head{
+        background: url(../img/berry.png) left -95px top 202px / 281px 281px no-repeat, url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) center / cover no-repeat;
+    }
+}
+@media screen and (max-width: 950px){
+    .head_action{
+        flex-direction: column;
+        align-items: start;
+        row-gap: 20px;
+    }
+    .head_action_text{
+        background-color: rgba(0, 0, 0, 0.3);
+        max-width: 100%;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    .head_inner{
+        padding-top: 132px;
     }
     
+}
+@media screen and (max-width: 850px){
+    .container_header{
+        padding: 20px 15px;       
+    }
+}
+@media screen and (max-width: 790px){
+    .head_inner{
+        padding-top: 90px;
+    }
+}
+@media screen and (max-width: 650px){
+    .head_inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .tasty{
+        width: 100%;
+    }
+    .head_action{
+        align-items: center;
+        row-gap: 20px;
+        width: 100%;
+    }
+    .head_action_button{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 615px){
+    .header_info{
+        gap: 20px;
+    } 
+}
+@media screen and (max-width: 485px){
+    .container_header{
+        padding: 15px 5px;       
+    }
+    .header_info{
+        gap: 5px;
+    } 
+    .header_phone_number{
+        gap: 5px;
+    }
+    .header_adress{
+        gap: 5px;
+    }
+    .head{
+        background: url(../img/berry.png) left -105px top 5px / 281px 281px no-repeat, url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -100px / cover no-repeat;
+    }
+}
+@media screen and (max-width: 440px){
+    .container_header{
+        padding: 15px 5px;
+        flex-wrap: wrap;   
+        justify-content: center;                
+    }
+    .header_info{
+        padding: 10px;
+        gap: 25px;
+        order: 1;
+        flex-basis: 100%;
+        flex-wrap: wrap;   
+        justify-content: center;  
+    } 
+    .header_phone_number{
+        gap: 5px;
+    }
+    .header_adress{
+        gap: 5px;
+    }
+}
+@media screen and (max-width: 405px){
+    .head{
+        background: url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -100px / cover no-repeat;
+    }
+}
+@media screen and (max-width: 345px){
+    .header_info{
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 335px){
+    .header_info{
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 328px){
+    .container_header{
+        padding: 15px 15px;
+        gap: 30px;
+        flex-wrap: nowrap;  
+    }
+    .header_info{
+        gap: 15px; 
+    } 
+    .header_phone_number{
+        gap: 15px;
+    }
+    .header_adress{
+        gap: 15px;
+    }
+    .head{
+        background: url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -140px / cover no-repeat;
+    }
+}
+@media screen and (max-width: 280px){
+    .container_header{
+        padding: 15px 15px;
+        gap: 10px;
+        flex-wrap: nowrap; 
+        box-sizing:content-box;
+    }
+    .header_info{
+        gap: 15px; 
+    } 
+    .header_phone_number{
+        gap: 15px;
+    }
+    .header_adress{
+        gap: 15px;
+    }
+    .head{
+        background: url(../img/leaf.png) left -250px bottom -100px / 393px 399px no-repeat, url(../img/berry-2.png) bottom right -100px / 273px 275px no-repeat, url(../img/bg.png) bottom right -130px / cover no-repeat;
+    }
 }
