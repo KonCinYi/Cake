@@ -255,6 +255,65 @@ div {
     cursor: pointer;
     font-family: inherit;
 }
+.photo{
+    background: 
+        url(../img/photo/phone1.png) left bottom / 886px 1022px no-repeat,
+        #2e363e;
+        padding-block: clamp(300px, 23vw, 310px);
+        padding-right: 15px;
+        position: relative;
+}
+.photo::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background: url(../img/photo/clouds1.png) center / cover no-repeat;
+    width: 100%;
+    height: 330px;
+}
+.photo::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: url(../img/photo/clouds2.png) center / cover no-repeat;
+    width: 100%;
+    height: 489px;
+}
+.photo__wrapper {
+    position: relative;
+}
+.photo__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    background: url(../img/photo/leaf4.png) center / cover no-repeat;
+    width: 168px;
+    height: 164px;
+    left: 18%;
+}
+.photo__wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../img/photo/berry5.png) center / cover no-repeat;
+    width: 244px;
+    aspect-ratio: 1;
+}
+.container{
+    max-width: calc(74.375rem + 0.9375em* 2);
+    padding-inline: 0.9375em;
+    margin-inline: auto;
+}
+.photo__inner {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    padding-block: 109px;
+}
 
 
 
