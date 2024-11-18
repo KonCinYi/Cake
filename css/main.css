@@ -372,10 +372,159 @@ div {
     margin: 0;
     height: 100%;
 }
-
-
-
-
+.about{
+    margin-bottom: 10px;
+}
+.about-inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.about-content{
+    padding-top: 97px;
+    color: #2e363e;
+}
+.about_top-title{
+    background-color: #f2f6fa;
+    max-width: 191px;
+    color: #2e363e;
+    text-align: center;
+    padding-block: 10px;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.25vw;
+}
+.about_title{
+    margin-bottom: 36px;
+    color: #2e363e;
+}
+.totle{
+    font-size: clamp(32px, 4.04vw, 48px);
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 0;
+}
+.about_list{
+    max-width: 438px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-bottom: 50px;
+}
+.about_item{
+    font-size: calc(18 / 16* 1rem);
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 12px;
+}
+.about_item::before{
+    content: "";
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5d6afb;
+}
+.about_button{
+    max-width: 300px;
+}
+.about_img{
+    position: relative;
+}
+.about_img::before{
+    content: "";
+    position: absolute;
+    background: url(../img/about/berry.svg) center / cover no-repeat;
+    width: 43.4%;
+    height: 31.2%;
+    top: 16.8%;
+    left: 0;
+}
+.about_img img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    position: relative;
+}
+.about_img-info{
+    color: #2e363e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 23%;
+    left: -10.2%;
+}
+.about_img::after{
+    content: "";
+    position: absolute;
+    background: url(../img/about/Group.svg) center / cover no-repeat;
+    width: 57%;
+    height: 40%;
+    top: 17.1%;
+    right: 0;
+    z-index: -1;
+}
+.about_img-name{
+    color: #ffffff;
+    background-color: #2e363e;
+    max-width: 15.5em;
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(14px, 1.9vw, 24px);
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-block: 15px;
+}
+.about_img-name::before{
+    content: "";
+    background: url(../img/about/Rectangle.svg) center / cover no-repeat;
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -23px;
+}
+.about_img-name::after{
+    content: "";
+    background: url(../img/about/Rectangle2.svg) center / cover no-repeat;
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -23px;
+}
+.about_img-profession{
+    background-color: #f2f6fa;
+    font-size: clamp(10px, 1.4vw, 18px);
+    max-width: 13.3em;
+    text-transform: uppercase;
+    padding-block: 15px;
+    position: relative;
+}
+.about_img-profession::before{
+    content: "";
+    background: url(../img/about/Rectangle3.svg) center / cover no-repeat;
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: -23px;
+}
+.about_img-profession::after{
+    content: "";
+    background: url(../img/about/Rectangle4.svg) center / cover no-repeat;
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: -23px;
+}
 
 
 @media screen and (max-width: 1700px){
